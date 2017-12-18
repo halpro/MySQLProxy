@@ -11,9 +11,9 @@ The asynchronous logging proxy server for your MySQL database.
 
 ### Build steps
 1. [Build your boost distribution](http://www.boost.org/build/doc/html/bbv2/installation.html). Examples:
-1.1. Build not using C++11 ABI and producing static libraries:
+* Build not using C++11 ABI and producing static libraries:
 ./b2 -j8 variant=release define=_GLIBCXX_USE_CXX11_ABI=0 --prefix={YOUR BOOST DIRECTORY HERE}/stage link=static
-1.2. Dynamic debug libraries:
+* Dynamic debug libraries:
 ./b2 -j8 variant=release define=_GLIBCXX_USE_CXX11_ABI=0 --prefix={YOUR BOOST DIRECTORY HERE}/stage
 
 2. Edit your boost installation directory in CMakeLists.txt file of the project under:
