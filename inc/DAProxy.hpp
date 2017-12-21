@@ -180,9 +180,7 @@ class DAProxy : public boost::enable_shared_from_this<DAProxy> {
         try {
             packet_length = (downstream_data_[2] << 8) | (downstream_data_[1] << 8) | downstream_data_[0];
             if (packet_length > 4) {
-                std::string data_string;
-                data_string = std::string( downstream_data_ + protocol_header_, downstream_data_ + protocol_header_ + packet_length - 1);
-
+                std::string data_string = std::string( downstream_data_ + protocol_header_, downstream_data_ + protocol_header_ + packet_length - 1);
                 if (boost::regex_match(data_string,  sql_pattern_))
                     message = data_string;
             }
