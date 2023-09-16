@@ -1,5 +1,5 @@
-# DAProxy project
-### Version 1.0.0
+# MySQLProxy (logging database access proxy) project
+### Version 1.0.1
 
 The asynchronous logging proxy server for your MySQL database.
 
@@ -25,10 +25,10 @@ The asynchronous logging proxy server for your MySQL database.
 MySQL server client-server protocol consists of encoded packets. Each packet contains a header and a body. See example:
 $\000\000\000\003SELECT * FROM my.tab\nLIMIT 0, 1000\nn_compile_os'mes'EADU\307mysql_native_password....
 
-The proxy does not interfere the client-server data exchange, the packet from the client (actual request like SQL) is being analyzed and in case of SQL is being logged to the log file in /tmp/daproxy folder.
+The proxy does not interfere with the client-server data exchange, the packet from the client (actual request like SQL) is being analyzed and in the case of SQL is being logged to the log file in /tmp/daproxy folder.
 
 ## Limitations
 * The proxy does not decode encrypted MySQL protocol traffic.
 * The proxy does not work with large SQL requests (over 8 Kbytes).
 
-Free use of the daproxy is permitted under the guidelines and in accordance with the Boost Software License.
+Free use of the MySQLProxy is permitted under the guidelines and in accordance with the Boost Software License.
